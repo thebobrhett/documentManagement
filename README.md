@@ -12,3 +12,7 @@ The only security currently built in is that for a user vs an administrator. A u
 There is also a routing system built in that allows a document to be routed to active domain members for review or approval. Notifications utilize smtp.
 
 There is a query screen that allows you to search for documents by type, metadata, creator, etc.
+
+The document store folder hierarchy is:
+\\hostname\docmgt -> docs -> year (like associated fiscal year)-> type (like invoices or contracts) 
+                     temp (scratch area for docs being added)
