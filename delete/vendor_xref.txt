@@ -1,0 +1,13 @@
+
+old  new  name
+ 23  402  Advantec Global Services
+ 79  416  Asahi Kasei Spandex Europe
+ 82  612  AT&T Mobility
+196  618  Cirrus Tech
+200  625  Clean Harbors Environmental Systems
+306  738  Enterprise Technologies
+405  857  Hewlett Packard Co
+413  2321 Hookset Corporation
+815  1800 Shannon Systems LLC
+834  1934 Smartware Group
+987  1737 Verizon Wireless

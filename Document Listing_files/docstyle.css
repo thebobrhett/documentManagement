@@ -1,0 +1,36 @@
+BODY {
+	FONT-SIZE: 10px; FONT-FAMILY: Verdana; BACKGROUND-COLOR: #dddddd
+}
+A IMG {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+H1 {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: darkblue
+}
+H2 {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: black
+}
+H3 {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px
+}
+H4 {
+	FONT-WEIGHT: normal; FONT-SIZE: 10px; COLOR: black
+}
+H5 {
+	FONT-WEIGHT: normal; FONT-SIZE: 8px; COLOR: gray
+}
+H6 {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: black; FONT-FAMILY: Arial
+}
+#logo {
+	LEFT: 30px; WIDTH: 140px; POSITION: absolute; TOP: 20px; HEIGHT: 67px
+}
+#title {
+	LEFT: 200px; OVERFLOW: hidden; WIDTH: 560px; POSITION: absolute; TOP: 20px; HEIGHT: 120px
+}
+#menu {
+	LEFT: 20px; WIDTH: 170px; CLIP: rect(0px 170px 1000px 0px); POSITION: absolute; TOP: 120px; HEIGHT: 150px
+}
+#body {
+	PADDING-RIGHT: 20px; BORDER-TOP: groove; PADDING-LEFT: 20px; Z-INDEX: 2; LEFT: 200px; PADDING-BOTTOM: 10px; BORDER-LEFT: groove; WIDTH: 760px; PADDING-TOP: 10px; POSITION: absolute; TOP: 120px
+}

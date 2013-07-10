@@ -1,0 +1,25 @@
+<script language="vbscript" runat="server">
+
+sub Application_OnStart
+'some code
+end sub
+
+sub Application_OnEnd
+'some code
+end sub
+
+sub Session_OnStart
+  'username="mogsa4\IUSR_MOGSB6", password="u30q|V.1Kftg62"
+'  set objNetwork = createobject("wscript.network")
+'  objNetwork.MapNetworkDrive "K:",  "\\mogsa4\DorCommon", True, "aksa\ASPNET", "Hard2see"
+'  objNetwork.MapNetworkDrive "L:",  "\\mogsb7\docmgt", True, "aksa\ASPNET", "Hard2see"
+'session("objNetwork") = objNetwork
+end sub
+
+sub Session_OnEnd
+  set objNetwork = createobject("wscript.network")
+  objNetwork.RemoveNetworkDrive "K:"
+  objNetwork.RemoveNetworkDrive "L:"
+end sub
+
+</script>

@@ -1,0 +1,16 @@
+select docs.doc_id, docdata.datatype_id, docdata.varchar_val, docdata.numeric_val from docs join docdata on docs.doc_id=docdata.doc_id where ((docdata.datatype_id='16' and docdata.numeric_val='587') or (docdata.datatype_id='8' and docdata.varchar_val='moexb')) and ((docdata.datatype_id='16' and docs.doc_id='7') or (docdata.datatype_id='8' and docs.doc_id='7'))
+
+select d1.doc_id from docdata d1, docdata d2 where ((d1.datatype_id='16' and d1.numeric_val='587') and (d2.datatype_id='8' and d2.varchar_val='moexb')) group by d1.doc_id
+
+select * from docs where docs.doc_id=(select d1.doc_id from docdata d1, docdata d2 where ((d1.datatype_id='16' and d1.numeric_val='587') and (d2.datatype_id='8' and d2.varchar_val='moexb')) group by d1.doc_id)
+
+select * from docs inner join docdata on docs.doc_id=(select d1.doc_id from docdata d1, docdata d2 where ((d1.datatype_id='16' and d1.numeric_val='587') and (d2.datatype_id='8' and d2.varchar_val='moexb')) group by d1.doc_id)
+
+select * from docs inner join docdata on docs.doc_id=(select d1.doc_id from docdata d1, docdata d2 where ((d1.datatype_id='16' and d1.numeric_val='587') and (d2.datatype_id='8' and d2.varchar_val='moexb')) group by docdata.doc_id) group by docs.doc_id
+
+select * from docs where docs.doc_id in (select d1.doc_id from docdata d1, docdata d2 where ((d1.datatype_id='4' and d1.numeric_val='245') or (d1.datatype_id='16' and d1.numeric_val='245') or (d1.datatype_id='17' and d1.numeric_val='245')) and ((d2.datatype_id='8' and d2.varchar_val='mibqo') or (d2.datatype_id='12' and d2.varchar_val='mibqo')))
+select * from docs where docs.doc_id in (select d1.doc_id from docdata d1, docdata d2 where ((d1.datatype_id='4' and d1.numeric_val='245') or (d1.datatype_id='16' and d1.numeric_val='245') or (d1.datatype_id='17' and d1.numeric_val='245')) and ((d2.datatype_id='8' and d2.varchar_val='mibqo') or (d2.datatype_id='12' and d2.varchar_val='mibqo')) and (docs.doc_id is not null) and docs.doc_id is not null order by docs.insert_ts desc
+select * from docs where docs.doc_id in (select d1.doc_id from docdata d1, docdata d2 where ((d1.datatype_id='4' and d1.numeric_val='245') or (d1.datatype_id='16' and d1.numeric_val='245') or (d1.datatype_id='17' and d1.numeric_val='245')) and ((d2.datatype_id='8' and d2.varchar_val='mibqo') or (d2.datatype_id='12' and d2.varchar_val='mibqo')) and (docs.doc_id is not null) and docs.doc_id is not null order by docs.insert_ts desc
+
+
+select * from docs where docs.doc_id in (select d1.doc_id from docdata d1 where d1.doc_id in (select d2.doc_id from docdata d2 where (d2.datatype_id='8' and d2.varchar_val='mibqo') or (d2.datatype_id='12' and d2.varchar_val='mibqo')) and ((d1.datatype_id='4' and d1.numeric_val='834') or (d1.datatype_id='16' and d1.numeric_val='834') or (d1.datatype_id='17' and d1.numeric_val='834')))
